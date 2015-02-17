@@ -45,7 +45,7 @@ public class Driver {
 		
 		
 		LinkedListQuestion lq = new LinkedListQuestion();
-		lq.revAltNodeAppendEnd(ll);
+		lq.pairWiseSwapLL(ll);
 		
 	}
 

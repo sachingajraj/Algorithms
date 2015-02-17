@@ -54,14 +54,14 @@ class LinkedList {
 
 public class LinkedListQuestion {
 
-	LinkedList _ll = null;
+	//LinkedList _ll = null;
 
 	public LinkedListQuestion() {
-		_ll = new LinkedList(1);
-		_ll.insert(2);
-		_ll.insert(3);
-		_ll.insert(4);
-		_ll.insert(5);
+//		_ll = new LinkedList(1);
+//		_ll.insert(2);
+//		_ll.insert(3);
+//		_ll.insert(4);
+//		_ll.insert(5);
 		//_ll.insert(6);
 		//_ll.printList();
 		//revAltNodeAppendEnd(_ll);
@@ -95,4 +95,40 @@ public class LinkedListQuestion {
 			printNode = printNode.next;
 		}
 	}
+	
+	public void pairWiseSwapLL(LinkedList ll){
+		Node head = ll.getHead();
+		if (head == null || head.next == null) 
+			return;
+		
+		Node prev = head;
+		Node curr = head.next;
+		head = curr;
+		
+		while(true){
+			Node temp = curr.next;
+			curr.next = prev;
+			
+			if(temp == null || temp.next == null){
+				prev.next = temp;
+				break;
+			}
+			prev.next = temp.next;
+			prev = temp;
+			curr = prev.next;
+		}
+		
+		
+		Node printNode = head;
+		while (printNode != null) {
+			System.out.print(printNode.data + " ");
+			printNode = printNode.next;
+		}
+	}
+	
 }
+
+
+
+
+
