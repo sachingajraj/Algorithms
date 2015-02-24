@@ -30,12 +30,12 @@ public class Driver {
 		*/
 		
 		/*
-		int[] arr1 = {2,5,7,9};
+		int[] arr1 = {3,5,10};
 		int[] arr2 = {1,3,6,9};
 		ArrayQuestions aq = new ArrayQuestions();
-		aq.printArray(aq.merge(arr1, arr2));
+		//aq.printArray(aq.merge(arr1, arr2));
+		System.out.println(aq.count(arr1, 3, 20));
 		*/
-		
 		
 		LinkedList ll = new LinkedList(2);
 		ll.insert(3);
@@ -45,8 +45,8 @@ public class Driver {
 		
 		
 		LinkedListQuestion lq = new LinkedListQuestion();
-		lq.pairWiseSwapLL(ll);
-		
+		lq.reverseLinkedListLoop(ll);
+	
 	}
 
 }
