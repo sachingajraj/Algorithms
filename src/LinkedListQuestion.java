@@ -126,6 +126,41 @@ public class LinkedListQuestion {
 		}
 	}
 	
+	public void reverseLinkedListLoop(LinkedList ll){
+		Node head = ll.getHead();
+		Node newHead = null;
+		Node curr = head;
+		Node next = head.next;
+		while(next != null){
+			curr.next = newHead;
+			newHead = curr;
+			curr = next;
+			next = next.next;
+		}
+		curr.next = newHead;
+		newHead = curr;
+		
+		Node printNode = newHead;
+		while (printNode != null) {
+			System.out.print(printNode.data + " ");
+			printNode = printNode.next;
+		}
+	}
+	
+	public void quickSortLL(Node head, Node tail){
+		Node pivot = tail;
+		Node curr = head;
+		Node prev = null;
+		while (curr != pivot){
+			if (curr.data <= pivot.data){
+				
+			}
+		}
+	}
+	
+	private void partitionLL(Node head){
+		
+	}
 }
 
 
