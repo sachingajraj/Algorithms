@@ -19,17 +19,15 @@ public class Driver {
 		 * System.out.print(i + " "); }
 		 */
 
+		StringQuestions sq = new StringQuestions();
+		sq.compressString("aabaaba");
+
 		/*
-		 * StringQuestions sq = new StringQuestions();
-		 * sq.longestPalindrome("abaaba");
+		 * int[] arr1 = { 3, 5, 10, -1, 50 }; int[] arr2 = {-3, -1, -3, -6, -9
+		 * }; ArrayQuestions aq = new ArrayQuestions();
+		 * aq.printArray(aq.merge(arr1, arr2));
+		 * System.out.println(aq.lis(arr2));
 		 */
-
-		int[] arr1 = { 3, 5, 10, -1, 50 };
-		int[] arr2 = {-3, -1, -3, -6, -9 };
-		ArrayQuestions aq = new ArrayQuestions();
-		// aq.printArray(aq.merge(arr1, arr2));
-		System.out.println(aq.lis(arr2));
-
 		/*
 		 * LinkedList ll = new LinkedList(2); ll.insert(3); ll.insert(20);
 		 * ll.insert(12); ll.printList();

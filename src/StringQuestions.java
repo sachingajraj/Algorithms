@@ -70,7 +70,18 @@ public class StringQuestions {
 	// Compress string aasasatb --> 2a2sa1t1b
 
 	public void compressString(String str) {
-
+		StringBuffer strBuff = new StringBuffer();
+		int count;
+		for (int i = 0; i < str.length(); i++) {
+			strBuff.append(str.charAt(i));
+			count = 1;
+			while (i + 1 < str.length() && str.charAt(i) == str.charAt(i + 1)) {
+				count++;
+				i++;
+			}
+			strBuff.append(count);
+		}
+		System.out.println(strBuff.toString());
 	}
 
 	// All distinct palindromic sub-strings
@@ -79,26 +90,26 @@ public class StringQuestions {
 		char[] arr = str.toCharArray();
 		int max_length = 1;
 		int start = 0;
-		int low,high;
+		int low, high;
 		for (int i = 1; i < str.length(); i++) {
 			low = i - 1;
 			high = i;
 			// even palindrome
-			while(low >= 0 && high < str.length() && arr[low] == arr[high]){
-				if (high - low + 1 > max_length){
+			while (low >= 0 && high < str.length() && arr[low] == arr[high]) {
+				if (high - low + 1 > max_length) {
 					start = low;
 					max_length = high - low + 1;
 				}
 				--low;
 				++high;
 			}
-			
+
 			low = i - 1;
 			high = i + 1;
-			
-			//odd palindrome
-			while(low >= 0 && high < str.length() && arr[low] == arr[high]){
-				if (high - low + 1 > max_length){
+
+			// odd palindrome
+			while (low >= 0 && high < str.length() && arr[low] == arr[high]) {
+				if (high - low + 1 > max_length) {
 					start = low;
 					max_length = high - low + 1;
 				}
@@ -106,7 +117,7 @@ public class StringQuestions {
 				++high;
 			}
 		}
-		
+
 		System.out.println(str.substring(start, start + max_length));
 	}
 
